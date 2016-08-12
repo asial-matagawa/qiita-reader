@@ -1,0 +1,102 @@
+/* ons-row, ons-col の外側関連 */
+
+div#list-item {
+    border-bottom: 1px solid gray;
+
+    background-color: white;
+
+    font-size: 9pt;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+/* ons-row, ons-col 関連 */
+
+ons-row {
+    /* ons-row の中身が折り返されるのを抑制 */
+    flex-wrap: nowrap;
+}
+
+ons-col#user {
+    text-align: center;
+}
+
+ons-row#tags {
+    /* ons-row の中身が折り返されるようにする */
+    flex-wrap: wrap;
+
+    padding: 10px 10px 0 5px;
+}
+
+ons-row#title {
+    padding: 10px 10px 0 5px;
+}
+
+ons-row#body {
+    overflow: hidden;
+    padding: 10px 10px 10px 5px;
+    max-height: 80px;
+
+    color: #333;
+}
+
+ons-row#created_at {
+    flex-direction: column;
+
+    padding: 16px 2px 2px 2px;
+
+    text-align: right;
+    font-size: 10pt;
+    color: black;
+}
+
+/* ons-row, ons-col の中身関連 */
+
+#user-profile_image_url {
+    margin-top: 10px;
+    max-width: 50px;
+    max-height: 50px;
+    min-width: 50px;
+    min-height: 50px;
+}
+
+#user-id {
+    font-weight: bold;
+}
+
+#user-organization {
+    margin: 10px 5px 0 5px;
+    border: 1px solid black;
+    border-radius: 4px;
+    padding: 2px;
+}
+
+#user-followers_count {
+    margin: 10px 5px 0 5px;
+    border: 1px solid #008000;
+    border-radius: 4px;
+    padding: 2px;
+
+    color: #008000;
+}
+
+.tag {
+    margin: 5px 5px 0 0;
+    border: 1px solid black;
+    border-radius: 4px;
+    padding: 2px;
+    
+    font-weight: bold;
+}
+
+#openItemLink {
+    font-size: 12pt;
+    font-weight: bold;
+    text-decoration: underline;
+    color: #204080;
+}
+
+#openItemLink:hover {
+    cursor: pointer;
+}

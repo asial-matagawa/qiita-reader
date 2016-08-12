@@ -1,0 +1,22 @@
+<ons-toolbar>
+    <div class="left">
+        <ons-toolbar-button (click)="openSideMenu();">
+            <ons-icon icon="md-menu"></ons-icon>
+        </ons-toolbar-button>
+    </div>
+    <div class="center">検索</div>
+</ons-toolbar>
+
+<ons-row style="margin-bottom: 20px;">
+    <ons-col id="queryTextFieldContainer" vertical-align="center">
+        <ons-input id="queryTextField" #queryTextField modifier="underbar" (keyup.enter)="searchButton.click()"></ons-input>
+    </ons-col>
+    <ons-col id="searchButtonContainer" width="96px" vertical-align="center">
+        <ons-button id="searchButton" #searchButton (click)="search(queryTextField.value)">
+            検索
+        </ons-button>
+    </ons-col>
+</ons-row>
+
+<qr-item-list [items]="items" *ngIf="!isLoading"></qr-item-list>
+<div style="text-align: center;" *ngIf="isLoading"><ons-progress-circular indeterminate></ons-progress-circular></div>

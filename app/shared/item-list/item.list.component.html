@@ -1,0 +1,18 @@
+<div id="list">
+    <div id="list-item" *ngFor="let item of items">
+        <ons-row>
+            <ons-col id="user" width="90px">
+                <img id="user-profile_image_url" [attr.src]="item.user.profile_image_url" (click)="showSearchPageAndSearchByUser(item.user.id)">
+                <div id="user-id" (click)="showSearchPageAndSearchByUser(item.user.id)">{{item.user.id}}</div>
+                <div id="user-organization" *ngIf="item.user.organization">{{item.user.organization}}</div>
+                <div id="user-followers_count">{{item.user.followers_count}}<br>followers</div>
+            </ons-col>
+            <ons-col>
+                <ons-row id="tags"><span class="tag" (click)="showSearchPageAndSearchByTag(tag.name)" *ngFor="let tag of item.tags">{{tag.name}}</span></ons-row>
+                <ons-row id="title"><span id="openItemLink" (click)="openItem(item)">{{item.title}}</span></ons-row>
+                <ons-row id="body">{{toShortBody(item.body)}}</ons-row>
+            </ons-col>
+        </ons-row>
+        <ons-row id="created_at">{{toReadableDateString(item.created_at)}}</ons-row>
+    </div>
+</div>

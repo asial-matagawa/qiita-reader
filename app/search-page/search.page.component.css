@@ -1,0 +1,19 @@
+ons-col#queryTextFieldContainer {
+    margin: 8px 0 0 8px;
+}
+
+ons-input#queryTextField {
+    width: 100%;
+}
+
+ons-col#searchButtonContainer {
+    margin: 8px;
+}
+
+ons-button#searchButton {
+    width: 100%;
+    height: 100%;
+
+    text-align: center;
+    font-size: 16px;
+}

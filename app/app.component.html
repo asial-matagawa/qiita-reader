@@ -1,0 +1,16 @@
+<ons-splitter>
+    <ons-splitter-side side="left" width="70%" collapse swipeable></ons-splitter-side>
+    <ons-splitter-content>
+        <ons-page>
+            <ons-tabbar #tabbar>
+                <!-- Onsen UI 側の修正が必要（Onsen UI 2.0.0-rc.15 では div を入れないと ngAfterViewInit 直後の ons-tabbar 要素操作に失敗する（_compile より先に処理が走ってしまう）） -->
+                <div class="tab-bar__content"></div>
+                <div class="tab-bar">
+                    <ons-tab label="tab1" active></ons-tab>
+                    <ons-tab label="tab2"></ons-tab>
+                    <ons-tab label="tab3"></ons-tab>
+                </div>
+            </ons-tabbar>
+        </ons-page>
+    </ons-splitter-content>
+</ons-splitter>

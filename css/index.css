@@ -1,0 +1,4 @@
+/* Onsen UI 側の修正が必要（tab bar をデフォルトで非表示にするオプションの追加が必要） */
+div.tab-bar {
+    display: none;
+}

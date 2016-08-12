@@ -1,0 +1,11 @@
+<ons-toolbar>
+    <div class="left">
+        <ons-toolbar-button (click)="openSideMenu();">
+            <ons-icon icon="md-menu"></ons-icon>
+        </ons-toolbar-button>
+    </div>
+    <div class="center">新着投稿一覧</div>
+</ons-toolbar>
+
+<qr-item-list [items]="items" *ngIf="!isLoading"></qr-item-list>
+<div style="text-align: center;" *ngIf="isLoading"><ons-progress-circular indeterminate></ons-progress-circular></div>
